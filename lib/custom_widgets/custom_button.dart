@@ -39,7 +39,9 @@ class CustomButton extends StatelessWidget {
 
 
 class CustomIconButton extends StatelessWidget {
-  const CustomIconButton({
+  final Icon buttonicon;
+  CustomIconButton({
+    this.buttonicon =  const Icon(Icons.backspace_outlined),
     super.key,
   });
 
@@ -49,7 +51,8 @@ class CustomIconButton extends StatelessWidget {
       height: 62,
       width: 62,
       child: IconButton(
-        icon: const Icon(Icons.backspace_outlined),
+        iconSize: 28,
+        icon: buttonicon,
         color: const Color(0xFF2A73FE),
         onPressed: () {},
         style: IconButton.styleFrom(
